@@ -1,17 +1,18 @@
 var mysql = require('mysql');
-var require = require('require');
+var require = require('./require');
 
-var foods = {
-	food_name: 'Almonds, Raw',
-	serving_size: '30',
-	total_calories: '170',
-	fat_grams: '15',
-	carbohydrate_grams: '7',
-	protein_grams: '6',
-	total_grams: '28'
+var efridge = {
+	food_name: 'Chicken Breast',
+	brand: 'Kroger',
+	serving_size: '4oz',
+	total_calories: '110',
+	fat_grams: '2.5',
+	carbohydrate_grams: '',
+	protein_grams: '21',
+	total_grams: '23.5'
 };
 
-var query = connection.query('insert into foods set ?', foods, function (err, result) {
+var query = connection.query('insert into efridge set ?', efridge, function (err, result) {
 	if (err) {
 		console.error(err);
 		return;
