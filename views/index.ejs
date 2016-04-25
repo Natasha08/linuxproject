@@ -21,12 +21,21 @@
       <h1>Here's hoping..</h1>
       <p><%= description %></p>
       <table>
-          <th>Name of Food</th>
-        <tr>
+      <tr>
+          <th class="col-xs-3">Name of Food</th>
+          <th class="col-xs-3">Brand Name</th>
+          <th class="col-xs-1">Serving Size</th>
+          <th class="col-xs-1">Total Calories</th>
+          <th class="col-xs-1">Fat(g)</th>
+          <th class="col-xs-1">Carbs(g)</th>
+          <th class="col-xs-1">Protein(g)</th>
+          <th class="col-xs-1">Total (g)[macros]</th>
+      </tr>        
         <% for (var i = 0; i< data.length; i++) { %>
-        <%= data[i].food_name %>
+      <tr>
+          <td><%= data[i].food_name %></td>
+      </tr>
         <% } %>
-        </tr>
       </table>
       </div>    
   </body>
