@@ -22,8 +22,8 @@ connection.query('select * from  efridge', function (err, rows) {
 
   res.render('index', {
 
-  	title: 'My e-Fridge',
-  	description: 'Printout of what\'s in my fridge.',
+  	title: 'My e-fridge',
+  	description: 'Enter the name of the food in your e-fridge that you want to add to today\'s meal.',
   	data: efridge
   });
 
