@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <head>  
+    <% include ./partials/head %>
   </head> 
+  <header>
+    <% include ./partials/header %>                
+  </header>
   <body class="container-fluid">
-      <h1>The Food App</h1>
-      <h2>NuColo</h2>
-      <div>    
-    	  <div class="row">
-    		  <div class="col-xs-12 col-md-2">NuColo Login</div>
-    		  <div class="col-xs-12 col-md-2">NuColo Register</div>
-    		  <div class="col-xs-12 col-md-2" >Workouts</div>
-    	  </div>
-      </div>
-      <div class="col-lg-12">
-      <h1>Main e-fridge</h1>
+
+      <div>
+      <h1>Main e-Fridge</h1>
       <p><%= description %></p>
-      <table>
+      <table class="table">
       <tr>
-          <th class="col-xs-3">Name of Food</th>
-          <th class="col-xs-3">Brand Name</th>
-          <th class="col-xs-1">Serving Size</th>
-          <th class="col-xs-1">Total Calories</th>
-          <th class="col-xs-1">Fat(g)</th>
-          <th class="col-xs-1">Carbs(g)</th>
-          <th class="col-xs-1">Protein(g)</th>
-          <th class="col-xs-1">Total (g)[macros]</th>
+          <th>Name of Food</th>
+          <th>Brand Name</th>
+          <th>Serving Size</th>
+          <th>Total Calories</th>
+          <th>Fat(g)</th>
+          <th>Carbs(g)</th>
+          <th>Protein(g)</th>
+          <th>Total (g)[macros]</th>
       </tr>        
         <% for (var i = 0; i< data.length; i++) { %>
       <tr>
