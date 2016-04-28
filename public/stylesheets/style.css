@@ -1,1 +1,1 @@
-body{background-color:#fff}.well{background-color:#c0cfc4}.jumbotron{position:relative;background:#c0cfc4 url("../images/avocado.png") center center;width:100%;height:100%;background-size:cover;overflow:hidden}
+body{background-color:#fff}.well{background-color:#c0cfc4}.jumbotron{position:relative;background:#c0cfc4 url("../images/avocado.png") center center;background-attachent:fixed;width:100%;height:100%;background-size:cover;overflow:hidden}tbody{background-color:#efefc8;border:2px solid #fff}.table_header{border:2px solid #efefc8}tr:nth-child(odd){background-color:#fff}

@@ -14,3 +14,15 @@ var dbtest = connection.query('select * from  efridge where food_name set ?', us
 }})
 
 module.exports = dbtest;
+
+// var dbtest = connection.query('select * from  workouts', function (err, result) {
+// 	if (err) {
+// 		console.error(err);
+// 		return;
+// 	} else {
+
+// 	console.log(result);
+
+// }})
+
+// module.exports = dbtest;

@@ -1,21 +1,50 @@
-@testcolor: white;
-@testcolor2: #c0cfc4;
+@backgroundColor: white;
+@cont_color: #c0cfc4;
+@tablecolor: #efefc8;
 
+/**********************************************
+				General Styles
+**********************************************/
 body {
-	background-color: @testcolor;
+	background-color: @backgroundColor;
 }
 
 .well {
-	background-color: @testcolor2;
+	background-color: @cont_color;
 }
+
+/**********************************************
+				Jumbotron 
+**********************************************/
 
 .jumbotron {
     position: relative;
-    background: @testcolor2 url("../images/avocado.png") center center;
+    background: @cont_color url("../images/avocado.png") center center;
+    background-attachent: fixed;
     width: 100%;
     height: 100%;
     background-size: cover;
     overflow: hidden;
 } 
+
+/**********************************************
+					Table 
+**********************************************/
+
+tbody {
+	background-color: @tablecolor;
+	border: 2px solid @backgroundColor;
+}
+
+.table_header {
+	border: 2px solid @tablecolor;
+}
+
+tr:nth-child(odd) {
+	background-color: @backgroundColor;
+
+}
+
+
 
 

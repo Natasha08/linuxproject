@@ -4,33 +4,33 @@ var mysql = require('mysql');
 var dbrequire = require('../public/javascripts/require');
 
 
-// router.get('/', function(req, res, next) {
+router.get('/my_efridge', function(req, res, next) {
 
-// userSearch = window.getElementById('userSearch');
-// var efridge;
+var efridge;
 
-// connection.query('select * from  efridge where food_name set ?', userSearch, function (err, result) {
-// 	efridge = rows;
+connection.query('select * from  efridge', function (err, rows) {
 
-// 	if (!err) {
+	efridge = rows;
 
-//   res.render('index', {
+	if (!err) {
 
-//   	title: 'My e-fridge',
-//   	description: 'Enter the name of the food in your e-fridge that you want to add to today\'s meal.',
-//   	data: efridge
-//   });
+  res.render('my_efridge', {
 
-// } if (err) {
-// 		console.log(err);
-// 	}	
+  	title: 'My e-fridge',
+  	description: 'Enter the name of the food in your e-fridge that you want to add to today\'s meal.',
+  	data: efridge
+  });
 
-// //	connection.end();
-// });
+} if (err) {
+		console.log(err);
+	}	
 
-// });
+//	connection.end();
+});
 
-// module.exports = router;
+});
+
+module.exports = router;
 
 // Learn how to make this do more than one thing without errors...related to next() and router.get
 
