@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET nutrition listing. */
 
-router.get('/nutrition', function(req, res, next) {
+router.get('/my_efridge', function(req, res, next) {
 
 var efridge;
 
@@ -13,10 +13,10 @@ connection.query('select * from  efridge', function (err, rows) {
 
 	if (!err) {
 
-  res.render('index', {
+  res.render('my_efridge', {
 
   	title: 'My Efridge',
-  	description: 'Printout of what\'s in my fridge.',
+  	description: 'Enter the name of the food in your e-fridge that you want to add to today\'s meal.',
   	data: efridge
   });
 
