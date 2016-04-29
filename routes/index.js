@@ -30,14 +30,36 @@ connection.query('select * from  efridge', function (err, rows) {
 
 });
 
-module.exports = router;
+//module.exports = router;
 
 // Learn how to make this do more than one thing without errors...related to next() and router.get
 
 router.get('/', function(req, res, next) {
-	res.render('index', {title: 'NuColo'})
+	res.render('index', {title: 'NuColo'});
 	next();
 });
+
+// router.get('/login', function(req, res, next) {
+// 	efridge = efridge;
+
+//  	res.render('index', efridge);
+
+// });
+
+module.exports = router;
+
+// connection.query('select * from  efridge', function (err, rows) {
+
+// 	efridge = rows;
+
+// 	if (!err) {
+
+//	res.render('index', efridge);
+//};
+//	connection.end();
+
+
+//});
 
 // router.get('/', function(req, res, next) {
 
@@ -66,4 +88,3 @@ router.get('/', function(req, res, next) {
 
 // });
 
-module.exports = router;
