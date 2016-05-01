@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var dbrequire = require('../public/javascripts/require');
+var shownutritiontable = require('../public/javascripts/nav.js');
 
 
 router.get('/my_efridge', function(req, res, next) {
@@ -20,6 +21,11 @@ connection.query('select * from  efridge', function (err, rows) {
   	description: 'Enter the name of the food in your e-fridge that you want to add to today\'s meal.',
   	data: efridge
   });
+
+
+var showtbl = document.getElementById('btntest1');
+showtbl.addEventListener('click', shownutritiontable, false);
+
 
 } if (err) {
 		console.log(err);
