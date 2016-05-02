@@ -1,8 +1,8 @@
 
 function shownutritiontable() {
 var showtbl = document.getElementById('testtable');
- if (showtbl.hasAttribute('testhide')) {
- showtbl.removeAttribute('testhide');
+ if (showtbl.hasAttribute('hidden')) {
+ showtbl.removeAttribute('hidden');
  } else {
  	console.log('Not working for some reason');
 }
