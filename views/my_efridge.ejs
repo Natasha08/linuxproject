@@ -24,12 +24,12 @@
        <p><strong><%= description %></strong></p>
       </div>
       <div class="well">
-          <button href="#" type="submit" class="btn btn-default" id="btntest1">Create Meal</button>
+          <button type="button" class="btn btn-default" id="btntest1">Create Meal</button>
           <button href="#" type="submit" class="btn btn-default" id="btntest2">Modify Foods</button>
           <button href="#" type="submit" class="btn btn-default" id="btntest3">Database</button>
       </div>
       <div class="well">
-      <table id="testtable" class="table table-bordered table-hover" class="hidden">
+      <table id="testtable" class="table table-bordered table-hover" hidden>
       <tr class="table_header">
           <th>Name of Food</th>
           <th>Brand Name</th>
@@ -53,6 +53,7 @@
       </tr>
         <% } %>
       </table>
-      </div>    
+      </div> 
   </body>
+  <script src="./javascripts/bundle.js"></script>
 </html>
