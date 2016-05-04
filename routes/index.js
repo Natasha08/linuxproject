@@ -3,7 +3,6 @@ var router = express.Router();
 var mysql = require('mysql');
 var dbrequire = require('../public/javascripts/require');
 
-
 router.get('/my_efridge', function(req, res, next) {
 
 var efridge;

@@ -14,7 +14,7 @@
           <h1>My e-fridge</h1>
         </div>  
       </div>
-      <div class="well">
+      <div id="dataSearch" class="well" hidden>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input id="userSearch" type="text" class="form-control" placeholder="Search my e-Fridge">
@@ -24,36 +24,15 @@
        <p><strong><%= description %></strong></p>
       </div>
       <div class="well">
-          <button type="button" class="btn btn-default" id="btntest1">Create Meal</button>
-          <button href="#" type="submit" class="btn btn-default" id="btntest2">Modify Foods</button>
+          <button type="button" class="btn btn-default" id="btntest1">Create Food</button>
           <button href="#" type="submit" class="btn btn-default" id="btntest3">Database</button>
       </div>
-      <div class="well">
-      <table id="testtable" class="table table-bordered table-hover" hidden>
-      <tr class="table_header">
-          <th>Name of Food</th>
-          <th>Brand Name</th>
-          <th>Serving Size</th>
-          <th>Total Calories</th>
-          <th>Fat(g)</th>
-          <th>Carbs(g)</th>
-          <th>Protein(g)</th>
-          <th>Total (g)[macros]</th>
-      </tr>        
-        <% for (var i = 0; i< data.length; i++) { %>
-      <tr>
-          <td><%= data[i].food_name %></td>
-          <td><%= data[i].brand %></td>
-          <td><%= data[i].serving_size %></td>
-          <td><%= data[i].total_calories %></td>
-          <td><%= data[i].fat_grams %></td>
-          <td><%= data[i].carbohydrate_grams %></td>
-          <td><%= data[i].protein_grams %></td>
-          <td><%= data[i].total_grams %></td>
-      </tr>
-        <% } %>
-      </table>
-      </div> 
+      <div class="well" hidden>
+        <form class="form">
+        </form>
+      </div>
+       <% include ./partials/food_table.ejs %>
+       <% include ./partials/foodform.ejs %>
+       <script src="./javascripts/bundle.js"></script>
   </body>
-  <script src="./javascripts/bundle.js"></script>
 </html>

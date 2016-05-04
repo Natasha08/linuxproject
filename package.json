@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build":"browserify ./main.js -o ./public/javascripts/bundle.js"
+    "build":"browserify ./routes/index.js -o ./public/javascripts/bundle.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

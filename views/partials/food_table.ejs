@@ -1,5 +1,4 @@
-<html>
-    <div class="well">
+      <div id="testtable" class="well" hidden>
       <table class="table table-bordered table-hover">
       <tr class="table_header">
           <th>Name of Food</th>
@@ -10,9 +9,8 @@
           <th>Carbs(g)</th>
           <th>Protein(g)</th>
           <th>Total (g)[macros]</th>
-      </tr> 
-
-  <% for (var i = 0; i< data.length; i++) { %>
+      </tr>        
+        <% for (var i = 0; i< data.length; i++) { %>
       <tr>
           <td><%= data[i].food_name %></td>
           <td><%= data[i].brand %></td>
@@ -23,5 +21,6 @@
           <td><%= data[i].protein_grams %></td>
           <td><%= data[i].total_grams %></td>
       </tr>
-    <% } %>
-</html>
+        <% } %>
+      </table>
+      </div> 
