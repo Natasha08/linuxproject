@@ -3,21 +3,14 @@
       <tr class="table_header">
           <th>Date</th>
           <th>Workout Day</th>
-          <th>Key Lift-1</th>
+          <th>Key Lift</th>
           <th>Weight (1)</th>
-          <th>Weight (2))</th>
+          <th>Weight (2)</th>
           <th>Weight (3)</th>
           <th>reps (1)</th>
           <th>reps (2))</th>
           <th>reps (3)</th>
-          <th>Key Lift-2</th>
-          <th>Weight (1)</th>
-          <th>Weight (2))</th>
-          <th>Weight (3)</th>
-          <th>reps (1)</th>
-          <th>reps (2))</th>
-          <th>reps (3)</th>
-      </tr>        
+      </tr> 
         <% for (var i = 0; i< data.length; i++) { %>
       <tr>
           <td><%= data[i].date %></td>
@@ -28,7 +21,12 @@
           <td><%= data[i].weight3 %></td>
           <td><%= data[i].reps1 %></td>
           <td><%= data[i].reps2 %></td>
-          <td><%= data[i].reps3 %></td>  
+          <td><%= data[i].reps3 %></td>
+      </tr>  
+
+      <tr>
+          <td></td>
+          <td></td>
           <td><%= data[i].key_lift2 %></td>
           <td><%= data[i].weight4 %></td>
           <td><%= data[i].weight5 %></td>
@@ -38,33 +36,40 @@
           <td><%= data[i].reps6 %></td>
       </tr>  
           <% } %>
-      </table>   
-
-<table class="table table-bordered table-hover">
+  
       <tr class="table_header">
-          <th>Secondary Lift-1</th>
+          <th></th>
+          <th></th>
+          <th>Secondary Lift</th>
           <th>Weight</th>
           <th>reps (1)</th>
-          <th>reps (2))</th>
+          <th>reps (2)</th>
           <th>reps (3)</th>
-          <th>Secondary Lift-2</th>
-          <th>Weight</th>
-          <th>reps (1)</th>
-          <th>reps (2))</th>
-          <th>reps (3)</th>
+          <td>--</td>
+          <td>--</td> 
       </tr>        
         <% for (var i = 0; i< data.length; i++) { %>
-      <tr>           
+      <tr> 
+          <td></td>
+          <td></td>          
           <td><%= data[i].secondary_lift1 %></td>
           <td><%= data[i].weight7 %></td>
           <td><%= data[i].reps7 %></td>
           <td><%= data[i].reps8 %></td>
-          <td><%= data[i].reps9 %></td>  
+          <td><%= data[i].reps9 %></td>
+          <td>--</td>
+          <td>--</td> 
+      </tr>
+      <tr> 
+          <td></td>
+          <td></td>     
           <td><%= data[i].secondary_lift2 %></td>
           <td><%= data[i].weight8 %></td>
           <td><%= data[i].reps10 %></td>
           <td><%= data[i].reps11 %></td>
-          <td><%= data[i].reps12 %></td>                    
+          <td><%= data[i].reps12 %></td>
+          <td>--</td>
+          <td>--</td>                     
       </tr>
         <% } %>
       </table>
