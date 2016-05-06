@@ -1,21 +1,8 @@
 var mysql = require('mysql');
-var mysql = require('./require');
+//var mysql = require('./require');
+var mysql = require('./requireg');
 
-userSearch = getElementById('userSearch');
-
-var dbtest = connection.query('select * from  efridge where food_name set ?', userSearch, function (err, result) {
-	if (err) {
-		console.error(err);
-		return;
-	} else {
-
-	console.log(result);
-
-}})
-
-module.exports = dbtest;
-
-// var dbtest = connection.query('select * from  workouts', function (err, result) {
+// var dbtest = connection.query('select * from  efridge', function (err, result) {
 // 	if (err) {
 // 		console.error(err);
 // 		return;
@@ -23,6 +10,17 @@ module.exports = dbtest;
 
 // 	console.log(result);
 
-// }})
+// }});
 
-// module.exports = dbtest;
+var dbtestg = connectiong.query('select * from  egym', function (err, result) {
+	if (err) {
+		console.error(err);
+		return;
+	} else {
+
+	console.log(result);
+
+}});
+
+//module.exports = dbtest;
+module.exports = dbtestg;

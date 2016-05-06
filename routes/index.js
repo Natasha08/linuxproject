@@ -34,6 +34,28 @@ connection.query('select * from  efridge', function (err, rows) {
 });
 });
 
+
+router.get('/my_etools', function(req, res, next) {
+	var egym;
+
+var dbtestg = connectiong.query('select * from  egym', function (err, result) {
+
+	egym = rows;
+
+	if (!err) {
+		res.render('my_etools', {
+			title: 'My e-gym',
+			description: 'Checkout your workouts!',
+			workout: egym
+		});
+
+	}	if (err) {
+			console.log(err);
+		}
+
+});
+});
+
 router.get('/my_etools', function(req, res, next) {
 
 var workouts;

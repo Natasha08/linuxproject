@@ -4,7 +4,7 @@ var foodData = document.getElementById('foodData');
 var foodProfile = document.getElementById('foodProfile');
 var dataSearch = document.getElementById('dataSearch');
 var registerDiv = document.getElementById('registerDiv');
-var exerciseEntry = document.getElementById('exerciseEntry');
+var workoutData = document.getElementById('workoutData');
 
 
 // To show the food profiles stored in the database.
@@ -16,7 +16,7 @@ function shownutritiontable() {
  dataSearch.removeAttribute('hidden');
  foodProfile.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
- exerciseEntry.setAttribute('hidden', 'true');
+ workoutData.setAttribute('hidden', 'true');
  console.log(foodData);
  } 
  else {
@@ -37,7 +37,7 @@ function createFood() {
  foodData.setAttribute('hidden', 'true');
  dataSearch.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
- exerciseEntry.setAttribute('hidden', 'true');
+ workoutData.setAttribute('hidden', 'true');
  console.log(foodProfile);
  } 
  else {
@@ -58,7 +58,7 @@ function registerUser() {
  foodData.setAttribute('hidden', 'true');
  dataSearch.setAttribute('hidden', 'true');
  foodProfile.setAttribute('hidden', 'true');
- exerciseEntry.setAttribute('hidden', 'true');
+ workoutData.setAttribute('hidden', 'true');
  console.log(registerDiv);
  } 
  else {
@@ -74,13 +74,13 @@ showRegister.addEventListener('click', registerUser, false);
 
 function exerciseForm() {
 
- if (exerciseEntry.hasAttribute('hidden')) {
- exerciseEntry.removeAttribute('hidden');
+ if (workoutData.hasAttribute('hidden')) {
+ workoutData.removeAttribute('hidden');
  foodData.setAttribute('hidden', 'true');
  dataSearch.setAttribute('hidden', 'true');
  foodProfile.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
- console.log(exerciseEntry);
+ console.log(workoutData);
  } 
  else {
  	console.log('err');
