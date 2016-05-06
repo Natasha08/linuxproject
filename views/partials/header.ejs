@@ -14,40 +14,41 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="./">Home <span class="sr-only">(current)</span></a></li>
-         <form class="navbar-form navbar-left" role="button">
+        <li id="home"><a href="./">Home</a></li>
+         <form class="navbar-form navbar-left">
            <div class="form-group">
              <input id="userName" type="text" class="form-control" placeholder="Username">
              <input id="userPass" type="text" class="form-control" placeholder="Password">
            </div>
            <button type="submit" class="btn btn-default" id="response">Login</button>
-         </form>        
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My e-fridge <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="./login">login test</a></li>
-            <li><a href="#">Modify e-fridge foods</a></li>
-            <li><a href="#">...something</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Create/Save Meals</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="./my_efridge">e-fridge: Main</a></li>
+           <button type="button" class="btn btn-default" id="btntest4">Register</button>
+         </form>  
+         <form class="navbar-form navbar-left">
+          <button type="button" class="btn btn-default" id="btntest5">Workouts</button>
+         </form> 
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown"> 
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> My e-tools <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li id="fridge"><a href="./my_etools">My e-fridge</a></li>
+                <li id="fridge"><a href="./my_etools">My e-gym</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">tracking workout website</a></li>
-            <li><a href="#">Decent free calcs/info</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Gov nutrition resources</a></li>
-          </ul>
-        </li>
-      </ul>
+        </ul>    
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#">tracking workout website</a></li>
+              <li><a href="#">Decent free calcs/info</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Gov nutrition resources</a></li>
+            </ul>
+          </li>
+        </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

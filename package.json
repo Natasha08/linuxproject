@@ -1,10 +1,10 @@
 {
   "name": "eatApp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build":"browserify ./routes/index.js -o ./public/javascripts/bundle.js"
+    "build": "browserify ./public/javascripts/buttons.js -o ./public/javascripts/bundle.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -25,5 +25,15 @@
     "mysql": "~2.10.2",
     "browserify": "~13.0.0",
     "uniq": "~1.0.1"
+  },
+  "description": "Node Express project with mysql. A tool to create meals and track workouts.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Natasha08/linuxproject.git"
+  },
+  "author": "Natasha Osborne <natasha08@me.com> (http://www.natashaosborne.com/)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Natasha08/linuxproject/issues"
   }
 }
