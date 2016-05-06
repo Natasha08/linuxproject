@@ -1,12 +1,27 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// This script deals mostly with client-side javascript functionality [buttons].
+// This script deals mostly with client-side javascript functionality - mainly buttons.
 
 var foodData = document.getElementById('foodData');
 var foodProfile = document.getElementById('foodProfile');
 var dataSearch = document.getElementById('dataSearch');
 var registerDiv = document.getElementById('registerDiv');
-var exerciseEntry = document.getElementById('exerciseEntry');
+var workoutData = document.getElementById('workoutData');
 
+//To show the workout input form
+
+function exerciseForm() {
+
+ if (workoutData.hasAttribute('hidden')) {
+ workoutData.removeAttribute('hidden');
+
+ } 
+ else {
+ 	console.log('err');
+}
+}	
+
+var showRegister = document.getElementById('btntest5');
+showRegister.addEventListener('click', exerciseForm, false);
 
 // To show the food profiles stored in the database.
 
@@ -17,8 +32,8 @@ function shownutritiontable() {
  dataSearch.removeAttribute('hidden');
  foodProfile.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
- exerciseEntry.setAttribute('hidden', 'true');
- console.log(foodData);
+ workoutData.setAttribute('hidden', 'true');
+ 
  } 
  else {
  	console.log('err');
@@ -38,8 +53,8 @@ function createFood() {
  foodData.setAttribute('hidden', 'true');
  dataSearch.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
- exerciseEntry.setAttribute('hidden', 'true');
- console.log(foodProfile);
+ workoutData.setAttribute('hidden', 'true');
+ 
  } 
  else {
  	console.log('err');
@@ -59,8 +74,8 @@ function registerUser() {
  foodData.setAttribute('hidden', 'true');
  dataSearch.setAttribute('hidden', 'true');
  foodProfile.setAttribute('hidden', 'true');
- exerciseEntry.setAttribute('hidden', 'true');
- console.log(registerDiv);
+ workoutData.setAttribute('hidden', 'true');
+ 
  } 
  else {
  	console.log('err');
@@ -70,25 +85,20 @@ function registerUser() {
 var showRegister = document.getElementById('btntest4');
 showRegister.addEventListener('click', registerUser, false);
 
+// To show the workout input form
 
-//To show the workout input form
+// function exerciseForm() {
 
-function exerciseForm() {
+//  if (workoutData.hasAttribute('hidden')) {
+//  workoutData.removeAttribute('hidden');
+//  console.log(workoutData);
+//  } 
+//  else {
+//  	console.log('err');
+// }
+// }	
 
- if (exerciseEntry.hasAttribute('hidden')) {
- exerciseEntry.removeAttribute('hidden');
- foodData.setAttribute('hidden', 'true');
- dataSearch.setAttribute('hidden', 'true');
- foodProfile.setAttribute('hidden', 'true');
- registerDiv.setAttribute('hidden', 'true');
- console.log(exerciseEntry);
- } 
- else {
- 	console.log('err');
-}
-}	
-
-var showRegister = document.getElementById('btntest5');
-showRegister.addEventListener('click', exerciseForm, false);
+// var showRegister = document.getElementById('btntest5');
+// showRegister.addEventListener('click', exerciseForm, false);
 
 },{}]},{},[1]);

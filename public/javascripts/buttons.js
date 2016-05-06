@@ -6,6 +6,21 @@ var dataSearch = document.getElementById('dataSearch');
 var registerDiv = document.getElementById('registerDiv');
 var workoutData = document.getElementById('workoutData');
 
+//To show the workout input form
+
+function exerciseForm() {
+
+ if (workoutData.hasAttribute('hidden')) {
+ workoutData.removeAttribute('hidden');
+
+ } 
+ else {
+ 	console.log('err');
+}
+}	
+
+var showRegister = document.getElementById('btntest5');
+showRegister.addEventListener('click', exerciseForm, false);
 
 // To show the food profiles stored in the database.
 
@@ -17,7 +32,7 @@ function shownutritiontable() {
  foodProfile.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
  workoutData.setAttribute('hidden', 'true');
- console.log(foodData);
+ 
  } 
  else {
  	console.log('err');
@@ -38,7 +53,7 @@ function createFood() {
  dataSearch.setAttribute('hidden', 'true');
  registerDiv.setAttribute('hidden', 'true');
  workoutData.setAttribute('hidden', 'true');
- console.log(foodProfile);
+ 
  } 
  else {
  	console.log('err');
@@ -59,7 +74,7 @@ function registerUser() {
  dataSearch.setAttribute('hidden', 'true');
  foodProfile.setAttribute('hidden', 'true');
  workoutData.setAttribute('hidden', 'true');
- console.log(registerDiv);
+ 
  } 
  else {
  	console.log('err');
@@ -69,23 +84,18 @@ function registerUser() {
 var showRegister = document.getElementById('btntest4');
 showRegister.addEventListener('click', registerUser, false);
 
+// To show the workout input form
 
-//To show the workout input form
+// function exerciseForm() {
 
-function exerciseForm() {
+//  if (workoutData.hasAttribute('hidden')) {
+//  workoutData.removeAttribute('hidden');
+//  console.log(workoutData);
+//  } 
+//  else {
+//  	console.log('err');
+// }
+// }	
 
- if (workoutData.hasAttribute('hidden')) {
- workoutData.removeAttribute('hidden');
- foodData.setAttribute('hidden', 'true');
- dataSearch.setAttribute('hidden', 'true');
- foodProfile.setAttribute('hidden', 'true');
- registerDiv.setAttribute('hidden', 'true');
- console.log(workoutData);
- } 
- else {
- 	console.log('err');
-}
-}	
-
-var showRegister = document.getElementById('btntest5');
-showRegister.addEventListener('click', exerciseForm, false);
+// var showRegister = document.getElementById('btntest5');
+// showRegister.addEventListener('click', exerciseForm, false);
