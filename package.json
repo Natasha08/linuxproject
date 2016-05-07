@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "browserify ./public/javascripts/buttons.js -o ./public/javascripts/bundle.js"
+    "build": "browserify ./public/javascripts/buttons.js ./public/javascripts/buttons2.js ./public/javascripts/buttons3.js -o ./public/javascripts/bundle.js"
+
   },
   "dependencies": {
     "body-parser": "~1.13.2",

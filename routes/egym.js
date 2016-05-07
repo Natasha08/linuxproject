@@ -1,20 +1,20 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var dbrequireg = require('../public/javascripts/require');
+var dbrequire = require('../public/javascripts/require');
 
 
-router.get('/', function(req, res, next) {
+router.get('/egym', function(req, res, next) {
 
 	var egym;
 
-	connectiong.query('select * from  egym', function (err, rows) {
+	connection.query('select * from  egym', function (err, rows) {
 
 	egym = rows;
 
 	if (!err) {
-		res.render('index', {
-			title: 'My e-gym',
+		res.render('egym', {
+			title: 'My e-tools',
 			description: 'Checkout your workouts!',
 			data: egym
 		});
