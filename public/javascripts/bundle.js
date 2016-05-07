@@ -6,6 +6,7 @@
 //to show the registration form 
 
 function registerUser() {
+
 var registerDiv = document.getElementById('registerDiv');
 
 
@@ -19,7 +20,6 @@ var registerDiv = document.getElementById('registerDiv');
 
 var showRegister = document.getElementById('btntest4');
 showRegister.addEventListener('click', registerUser, false);
-
 
 
 
