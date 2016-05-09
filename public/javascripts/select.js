@@ -1,6 +1,5 @@
 var mysql = require('mysql');
 //var mysql = require('./require');
-var mysql = require('./requireg');
 
 // var dbtest = connection.query('select * from  efridge', function (err, result) {
 // 	if (err) {
