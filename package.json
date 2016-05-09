@@ -5,7 +5,6 @@
   "scripts": {
     "start": "node ./bin/www",
     "build": "browserify ./public/javascripts/buttons.js ./public/javascripts/buttons2.js ./public/javascripts/buttons3.js -o ./public/javascripts/bundle.js"
-
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -25,7 +24,9 @@
     "grunt-contrib-uglify": "~1.0.1",
     "mysql": "~2.10.2",
     "browserify": "~13.0.0",
-    "uniq": "~1.0.1"
+    "uniq": "~1.0.1",
+    "fly": "~1.2.4",
+    "grunt-contrib-clean": "~1.0.0"
   },
   "description": "Node Express project with mysql. A tool to create meals and track workouts.",
   "repository": {

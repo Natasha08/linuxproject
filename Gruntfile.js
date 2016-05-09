@@ -2,6 +2,14 @@ module.exports = function(grunt) {
 
 // Project configuration. 
 grunt.initConfig({
+
+clean: {
+  options: {
+    'no-write': true
+  },
+  js: ["build/*.js", "!build/*.min.js", "!public/javascripts/require.js"],
+  build: ['build'],
+},
   concat: {
     js: {
       src: ['app.js', 'routes/*.js', 'public/javascripts/*.js'],
@@ -32,11 +40,13 @@ watch: {
     }
   }
 
+
 });
 
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.registerTask('default', ['concat', 'uglify', 'watch']);
+grunt.loadNpmTasks('grunt-contrib-clean');
+grunt.registerTask('default', ['concat', 'uglify', 'watch', 'clean']);
 
 };

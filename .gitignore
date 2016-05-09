@@ -2,7 +2,6 @@
 #Logs
 *.log
 node_modules/
-planofday.js
 *.sql
 use.js
 require.*
