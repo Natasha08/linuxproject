@@ -39,6 +39,9 @@ var foodProfile = document.getElementById('foodProfile');
 var showFood = document.getElementById('btntest1');
 showFood.addEventListener('click', createFood, false);
 
+//button2!
+
+
 module.exports = shownutritiontable;
 module.exports = createFood;
 module.exports = showFood;

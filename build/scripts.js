@@ -336,6 +336,9 @@ var foodProfile = document.getElementById('foodProfile');
 var showFood = document.getElementById('btntest1');
 showFood.addEventListener('click', createFood, false);
 
+//button2!
+
+
 module.exports = shownutritiontable;
 module.exports = createFood;
 module.exports = showFood;
@@ -354,6 +357,8 @@ var workoutData = document.getElementById('workoutData');
 
 var showWorkout = document.getElementById('btntest5');
 showWorkout.addEventListener('click', exerciseForm, false);
+
+//button3!
 
 module.exports = exerciseForm;
 var mysql = require('mysql');

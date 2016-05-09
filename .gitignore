@@ -4,6 +4,7 @@
 node_modules/
 *.sql
 use.js
+flightplan.js
 require.*
 
 ## sublime ##
