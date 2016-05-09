@@ -1,7 +1,12 @@
 ## Node ##
 #Logs
 *.log
+node_modules/
+planofday.js
+*.sql
+use.js
+require.*
 
 ## sublime ##
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
