@@ -292,7 +292,7 @@ var showRegister = document.getElementById('btntest4');
 showRegister.addEventListener('click', reg, false);
 };
 
-
+//button1!
 module.exports = registerUser;
 
 // To show the food profiles stored in the database.
@@ -461,7 +461,7 @@ var query = connectiong.query('insert into egym set ?', egymA, function (err, re
 var mysql = require('mysql');
 
 connection = mysql.createConnection({
-	host: 'localhost',
+	host: '127.0.0.1',
 	user: 'tulsiqt',
 	password: 'Yoni3454!',
 	database: 'freetools'
