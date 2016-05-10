@@ -53,8 +53,8 @@ var query = connection.query('insert into efridge set ?', efridge, function (err
 		console.error(err);
 		return;
 	} else
-	res.redirect('/my_etools');
 
+	res.redirect('/my_etools');
 });
 	
 

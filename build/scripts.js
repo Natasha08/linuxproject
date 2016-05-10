@@ -119,7 +119,7 @@ var query = connection.query('insert into efridge set ?', efridge, function (err
 		console.error(err);
 		return;
 	} else
-	res.redirect('/my_etools');
+	res.redirect('/efridge');
 });
 	
 
@@ -461,14 +461,14 @@ var query = connectiong.query('insert into egym set ?', egymA, function (err, re
 var mysql = require('mysql');
 
 connection = mysql.createConnection({
-	host: '127.0.0.1',
-	user: 'tulsiqt',
+	host: 'localhost',
+	user: 'tulsi',
 	password: 'Yoni3454!',
 	database: 'freetools'
 });
 // connectiong = mysql.createConnection({
 // 	host: 'localhost',
-// 	user: 'tulsiqt',
+// 	user: 'tulsi',
 // 	password: 'Yoni3454!',
 // 	database: 'mainGym'
 // });
