@@ -31,7 +31,6 @@ connection.query('select * from  efridge', function (err, rows) {
 } if (err) {
 		console.log(err);
 	}	
- // connection.end();
 });
 });
 
@@ -55,6 +54,7 @@ var query = connection.query('insert into efridge set ?', efridge, function (err
 		return;
 	} else
 	res.redirect('/my_etools');
+
 });
 	
 
