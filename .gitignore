@@ -5,6 +5,7 @@ node_modules/
 *.sql
 use.js
 flightplan.js
+*.msu
 require.*
 
 ## sublime ##
