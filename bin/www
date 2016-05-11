@@ -5,8 +5,9 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('eatApp:server');
+var debug = require('debug')('mycolo:server');
 var http = require('http');
+var http = require('https');
 
 /**
  * Get port from environment and store in Express.
