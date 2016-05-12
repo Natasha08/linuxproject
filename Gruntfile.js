@@ -47,6 +47,12 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-clean');
-grunt.registerTask('default', ['concat', 'uglify', 'clean']);
+
+
+//production grunt default
+grunt.registerTask('default', ['concat', 'uglify', 'watch']);
+
+//dev grunt default
+//grunt.registerTask('default', ['concat', 'uglify', 'clean']);
 
 };
