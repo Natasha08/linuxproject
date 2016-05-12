@@ -19,7 +19,6 @@ var dataSearch = document.getElementById('dataSearch');
 var showtblclick = document.getElementById('btntest3');
 showtblclick.addEventListener('click', shownutritiontable, false);
 
-
 //to show the food profile FORM for the user. 
 
 function createFood() {
@@ -39,6 +38,5 @@ var foodProfile = document.getElementById('foodProfile');
 var showFood = document.getElementById('btntest1');
 showFood.addEventListener('click', createFood, false);
 
-module.exports = shownutritiontable;
-module.exports = createFood;
+module.exports = showtblclick;
 module.exports = showFood;

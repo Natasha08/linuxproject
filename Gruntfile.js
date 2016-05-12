@@ -7,15 +7,29 @@ grunt.initConfig({
 // uncomment concat for DEVELOPMENT / versioning (git)
 
 concat: {
-  js: {
-    src: ['app.js', 'routes/*.js', 'public/javascripts/*.js','!public/javascripts/require.js', '!flightplan.js'],
+  client_js: {
+    src: ['public/javascripts/buttons.js', 'public/javascripts/buttons2.js', 'public/javascripts/buttons3.js'],
+    dest: 'public/javascripts/buttonsall.js',
+  },
+  js: {   
+    src: ['app.js', 'routes/*.js', 'public/javascripts/bundle.js'],
     dest: 'build/scripts.js',
   },
-  css: {
-    src: ['public/stylesheets/footer.css', 'public/stylesheets/style.css'],
-    dest: 'build/styles.css',
-  },    
+  less: {
+    src: ['public/stylesheets/footer.less', 'public/stylesheets/style.less'],
+    dest: 'public/stylesheets/concat.less',   
 },
+},
+  // stripcomments: {
+  //   your_target: {
+  //     // Target-specific file lists and/or options go here.
+  //     options: {
+  //         singleline: true,
+  //         multiline: true
+  //     },
+  //     src: ['build/styles.css'] // files to remove comments from
+  //   },
+  // },
 
 //puts all files listed except '!' in one file, designated @dest:
 
@@ -62,6 +76,7 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
+// grunt.loadNpmTasks('grunt-stripcomments');
 
 //select and uncomment correct concat concat above per task
 //production grunt default 
