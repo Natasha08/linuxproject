@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var dbrequire = require('../public/javascripts/require');
+var pool = require('../public/javascripts/require');
 
 // router.get('/', function(req, res, next) {
 // 	res.render('index', {title: 'NuColo'});
@@ -14,7 +14,9 @@ router.get('/efridge', function(req, res, next) {
 
 var efridge;
 
-connection.query('select * from  efridge', function (err, rows) {
+pool.getConnection(function(err,connection) {
+//	('select * from  efridge', 
+connection.query('select * from  efridge', function (err,rows) {
 
 	efridge = rows;
 
@@ -32,11 +34,20 @@ connection.query('select * from  efridge', function (err, rows) {
 		console.log(err);
 	}	
 });
+connection.release();
+});
 });
 
 
 router.post('/efridge', function(req, res, next) {
+pool.getConnection(function(err,connection) {
+	if (err) {
+		console.error(err);
+		return;
+	} else {
+		console.log(connection);
 
+	}
 var efridge = {
  	food_name: req.body.food_name,
  	brand: req.body.brand,
@@ -48,7 +59,7 @@ var efridge = {
 	total_grams: req.body.total_grams
 };
 
-var query = connection.query('insert into efridge set ?', efridge, function (err, result) {
+ pool.query('insert into efridge set ?', efridge, function (err, result) {
 	if (err) {
 		console.error(err);
 		return;
@@ -56,7 +67,8 @@ var query = connection.query('insert into efridge set ?', efridge, function (err
 
 	res.redirect('/my_etools');
 });
-	
+ connection.release();
+});	
 
 });
 

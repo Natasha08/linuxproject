@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "build": "browserify public/javascripts/buttons.js -o public/javascripts/bundle.js",
-    "build2": "browserify public/javascripts/buttons2.js -o public/javascripts/bundle2.js",
-    "build3": "browserify public/javascripts/buttons3.js -o public/javascripts/bundle3.js"
+    "build": "browserify public/javascripts/buttonsall.js -o public/javascripts/bundle.js",
+    "lesscon": "lessc public/stylesheets/concat.less build/styles.css"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -29,7 +27,8 @@
     "flightplan": "~0.6.14",
     "mysql": "~2.10.2",
     "browserify": "~13.0.1",
-    "grunt-contrib-cssmin": "~1.0.1"
+    "grunt-contrib-cssmin": "~1.0.1",
+    "grunt-stripcomments": "~0.5.0"
   },
   "description": "Node Express project with mysql. A tool to create meals and track workouts.",
   "repository": {
