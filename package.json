@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "browserify public/javascripts/buttons.js -o public/javascripts/bundle.js",
+    "build2": "browserify public/javascripts/buttons2.js -o public/javascripts/bundle2.js",
+    "build3": "browserify public/javascripts/buttons3.js -o public/javascripts/bundle3.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

@@ -173,7 +173,7 @@ module.exports = router;
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // This script deals mostly with client-side javascript functionality - mainly buttons.
 
-//separated javascript control buttons on my_etools.ejs and 
+//create variable with anon function to control buttons on my_etools.ejs and 
 //to prevent null errors with exerciseForm()
 //to show the registration form 
 
@@ -193,13 +193,9 @@ var registerDiv = document.getElementById('registerDiv');
 var showRegister = document.getElementById('btntest4');
 showRegister.addEventListener('click', registerUser, false);
 
-
-var homebtn
-
-
-
-module.exports = registerUser;
 module.exports = showRegister;
+
+
 
 },{}]},{},[1]);
 
@@ -276,7 +272,8 @@ module.exports = exerciseForm;
 //to prevent null errors with exerciseForm()
 //to show the registration form 
 
-var registerUser = function reg() {
+function registerUser() {
+
 var registerDiv = document.getElementById('registerDiv');
 
 
@@ -286,14 +283,14 @@ var registerDiv = document.getElementById('registerDiv');
  else {
  	console.log('err');
 }
-	
+};	
 
 var showRegister = document.getElementById('btntest4');
-showRegister.addEventListener('click', reg, false);
-};
+showRegister.addEventListener('click', registerUser, false);
 
-//button1!
-module.exports = registerUser;
+module.exports = showRegister;
+
+
 
 // To show the food profiles stored in the database.
 
@@ -336,9 +333,6 @@ var foodProfile = document.getElementById('foodProfile');
 var showFood = document.getElementById('btntest1');
 showFood.addEventListener('click', createFood, false);
 
-//button2!
-
-
 module.exports = shownutritiontable;
 module.exports = createFood;
 module.exports = showFood;
@@ -357,8 +351,6 @@ var workoutData = document.getElementById('workoutData');
 
 var showWorkout = document.getElementById('btntest5');
 showWorkout.addEventListener('click', exerciseForm, false);
-
-//button3!
 
 module.exports = exerciseForm;
 var mysql = require('mysql');

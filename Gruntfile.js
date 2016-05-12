@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 grunt.initConfig({
 
 //puts all files listed except '!' in one file, designated @dest:
-// uncomment concat for development / versioning (git)
+// uncomment concat for DEVELOPMENT / versioning (git)
 
 concat: {
   js: {
@@ -19,10 +19,10 @@ concat: {
 
 //puts all files listed except '!' in one file, designated @dest:
 
-// uncomment concat for production
+//uncomment concat for PRODUCTION
 // concat: {
 //   js: {
-//     src: ['app.js', 'routes/*.js', 'public/javascripts/*.js'],
+//     src: ['app.js', 'routes/*.js', 'public/javascripts/bundle.js', 'public/javascripts/bundle2.js', 'public/javascripts/bundle3.js', 'public/javascripts/require.js'], 
 //     dest: 'build/scripts.js',
 //   },
 //   css: {

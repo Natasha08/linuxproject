@@ -4,7 +4,8 @@
 //to prevent null errors with exerciseForm()
 //to show the registration form 
 
-var registerUser = function reg() {
+function registerUser() {
+
 var registerDiv = document.getElementById('registerDiv');
 
 
@@ -14,11 +15,11 @@ var registerDiv = document.getElementById('registerDiv');
  else {
  	console.log('err');
 }
-	
+};	
 
 var showRegister = document.getElementById('btntest4');
-showRegister.addEventListener('click', reg, false);
-};
+showRegister.addEventListener('click', registerUser, false);
 
-//button1!
-module.exports = registerUser;
+module.exports = showRegister;
+
+
