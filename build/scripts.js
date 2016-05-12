@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
 var routes = require('./routes/index');
 var routesg = require('./routes/egym');
 var routesf = require('./routes/efridge');
@@ -96,7 +97,6 @@ connection.query('select * from  efridge', function (err, rows) {
 } if (err) {
 		console.log(err);
 	}	
- // connection.end();
 });
 });
 
@@ -119,7 +119,8 @@ var query = connection.query('insert into efridge set ?', efridge, function (err
 		console.error(err);
 		return;
 	} else
-	res.redirect('/efridge');
+
+	res.redirect('/my_etools');
 });
 	
 
@@ -153,7 +154,6 @@ router.get('/egym', function(req, res, next) {
 	}	if (err) {
 			console.log(err);
 		}
-
 });
 });
 
@@ -458,24 +458,6 @@ var query = connectiong.query('insert into egym set ?', egymA, function (err, re
 // 	} else
 // 	console.error(result);
 // });
-var mysql = require('mysql');
-
-connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'tulsi',
-	password: 'Yoni3454!',
-	database: 'freetools'
-});
-// connectiong = mysql.createConnection({
-// 	host: 'localhost',
-// 	user: 'tulsi',
-// 	password: 'Yoni3454!',
-// 	database: 'mainGym'
-// });
-
-module.exports = connection;
-// module.exports = connectiong;
-
 var mysql = require('mysql');
 //var mysql = require('./require');
 
