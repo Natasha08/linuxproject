@@ -28,7 +28,8 @@
     "grunt-contrib-clean": "~1.0.0",
     "flightplan": "~0.6.14",
     "mysql": "~2.10.2",
-    "browserify": "~13.0.1"
+    "browserify": "~13.0.1",
+    "grunt-contrib-cssmin": "~1.0.1"
   },
   "description": "Node Express project with mysql. A tool to create meals and track workouts.",
   "repository": {
