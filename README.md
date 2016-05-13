@@ -1,26 +1,26 @@
 # linuxproject
 <p>A nodejs express app for tracking calories and strength gains. Future description to come.</p>
 
-<h3>##Grunt commands##</h3>
-<h4>#[production]</h4>
+<h4>##Grunt commands##</h4>
+<h5>#[production]</h5>
 <p>grunt</p>
 <p>#runs default tasks 'concat', 'uglify', 'cssmin', including require.js</p>
 
 <p>#Be sure to comment/uncomment the appropriate concat command [dev or production]</p>
 <p>#concast less files to concat.less</p>
 
-<h4>#dev</h4>
+<h5>#dev</h5>
 <p>grunt dev</p>
 <p>#runs the above commands, with +1 = 'watch'</p>
 
-<h3>##Package.json##</h3>
+<h4>##Package.json##</h4>
 <p># converts concat.less >> build/styles.css</p>
 <p>npm run lesscon</p> 
 
 <p># this will browserify the concat client-side js('grunt' default will concat js files)</p>
 <p>npm run build</p>
 
-<h3>##flightplan.js##</h3>
+<h4>##flightplan.js##</h4>
 
 <p>fly production</p>
 <p>fly dev</p>
