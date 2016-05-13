@@ -8,24 +8,23 @@ var ejs = require('ejs');
 var fs = require('fs');
 
 //read file
- var templateString = fs.readFileSync('./views/email.ejs', 'utf-8');
-//console.log(templateString);
 
 router.get('/', function(req, res, next) {
 
-var email     = new sendgrid.Email(); 
-email.setTos('');
-email.setFrom('');
-email.setSubject('');
-email.setText('');
-//compile file and .setHtml
-email.setHtml(ejs.render(templateString, {firstName: ''}));
+	 res.render('index', {title: 'MyColo'});
+// var email     = new sendgrid.Email(); 
+// email.setTos('');
+// email.setFrom('');
+// email.setSubject('');
+// email.setText('');
+// //compile file and .setHtml
+// email.setHtml(ejs.render(templateString, {firstName: ''}));
 
-//send email
-sendgrid.send(email, function(err, json) {
-  if (err) { console.error(err); }
-  console.log(json);
-});
+// //send email
+// sendgrid.send(email, function(err, json) {
+//   if (err) { console.error(err); }
+//   console.log(json);
+// });
 });
 	// res.render('preview', {title: 'MyColo'});
 	// router.get('/preview', function(req, res) {

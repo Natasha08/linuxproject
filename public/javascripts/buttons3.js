@@ -14,4 +14,4 @@ var workoutData = document.getElementById('workoutData');
 var showWorkout = document.getElementById('btntest5');
 showWorkout.addEventListener('click', exerciseForm, false);
 
-module.exports = showWorkout;
+module.exports = exerciseForm;

@@ -6,30 +6,14 @@ grunt.initConfig({
 //puts all files listed except '!' in one file, designated @dest:
 // uncomment concat for DEVELOPMENT / versioning (git)
 
-concat: {
-  client_js: {
-    src: ['public/javascripts/buttons.js', 'public/javascripts/buttons2.js', 'public/javascripts/buttons3.js'],
-    dest: 'public/javascripts/buttonsall.js',
+  concat: {
+    js: {
+      src: ['app.js', 'routes/*.js','public/javascripts/bundle.js', 'public/javascripts/bundle2.js', 'public/javascripts/bundle3.js'],
+      dest: 'build/scripts.js',
+    },
   },
-  js: {   
-    src: ['app.js', 'routes/*.js', 'public/javascripts/bundle.js'],
-    dest: 'build/scripts.js',
-  },
-  less: {
-    src: ['public/stylesheets/footer.less', 'public/stylesheets/style.less'],
-    dest: 'public/stylesheets/concat.less',   
-},
-},
-  // stripcomments: {
-  //   your_target: {
-  //     // Target-specific file lists and/or options go here.
-  //     options: {
-  //         singleline: true,
-  //         multiline: true
-  //     },
-  //     src: ['build/styles.css'] // files to remove comments from
-  //   },
-  // },
+
+
 
 //puts all files listed except '!' in one file, designated @dest:
 
@@ -81,14 +65,15 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 //select and uncomment correct concat concat above per task
 //production grunt default 
 grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+grunt.registerTask('production', ['concat', 'uglify', 'cssmin']);
 
 //dev build
 grunt.registerTask('dev', ['concat', 'uglify','cssmin', 'watch']);
-
+};
 
 //working on including this as a third command. Looking for alternative to comment/uncomment solution above
 //git grunt default
-grunt.registerTask('git', ['concat', 'uglify', 'cssmin']);
-};
+// grunt.registerTask('git', ['concat', 'uglify', 'cssmin']);
+// };
 
 

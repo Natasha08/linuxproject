@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "browserify public/javascripts/buttonsall.js -o public/javascripts/bundle.js",
+    "build1": "browserify public/javascripts/buttons.js -o public/javascripts/bundle.js",
+    "build2": "browserify public/javascripts/buttons2.js -o public/javascripts/bundle2.js",
+    "build3": "browserify public/javascripts/buttons2.js -o public/javascripts/bundle3.js",
     "lesscon": "lessc public/stylesheets/concat.less build/styles.css"
   },
   "dependencies": {

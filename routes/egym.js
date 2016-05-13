@@ -21,9 +21,10 @@ pool.getConnection(function(err,connection) {
 
 	}	if (err) {
 			console.log(err);
+			connection.release();
 		}
+});		
 		connection.release();
-});
 });
 });
 module.exports = router;
